@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Termux Documentation Web</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+background:#0d1117;
+color:#e6edf3;
+font-family:Segoe UI,Arial,sans-serif;
+line-height:1.7;
+}
+
+header{
+background:#161b22;
+padding:50px 20px;
+text-align:center;
+border-bottom:3px solid #00ff88;
+}
+
+.logo{
+width:120px;
+height:120px;
+margin:auto;
+}
+
+h1{color:#00ff88;margin-top:15px;}
+.subtitle{color:#8b949e;}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:#161b22;
+padding:25px;
+margin-bottom:20px;
+border-radius:12px;
+border-left:5px solid #00ff88;
+}
+
+h2{color:#00ff88;margin-bottom:15px;}
+
+.tools-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:10px;
+}
+
+.tools-grid button{
+background:#00ff88;
+color:#000;
+border:none;
+padding:15px;
+font-weight:bold;
+border-radius:10px;
+cursor:pointer;
+}
+
+#codeBox{
+background:#000;
+color:#00ff88;
+padding:15px;
+margin-top:15px;
+border-radius:10px;
+white-space:pre-wrap;
+min-height:160px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+}
+
+.item{
+background:#21262d;
+padding:15px;
+border-radius:10px;
+}
+
+footer{
+background:#161b22;
+padding:30px;
+text-align:center;
+border-top:2px solid #00ff88;
+margin-top:30px;
+color:#8b949e;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<svg class="logo" viewBox="0 0 100 100">
+<rect x="10" y="10" width="80" height="80" rx="12" fill="#00ff88"/>
+<path d="M30 30 L55 50 L30 70"
+stroke="#000" stroke-width="8" fill="none" stroke-linecap="round"/>
+<line x1="60" y1="70" x2="78" y2="70" stroke="#000" stroke-width="8"/>
+</svg>
+
+<h1>TERMUX DOCUMENTATION WEB</h1>
+<p class="subtitle">Linux Environment & Terminal Emulator for Android</p>
+
+</header>
+
+<div class="container">
+
+<!-- ABOUT -->
+<div class="card">
+<h2>Apa Itu Termux?</h2>
+
+<p>
+Termux adalah aplikasi terminal emulator untuk Android yang menyediakan lingkungan Linux lengkap di dalam smartphone. Dengan Termux, pengguna dapat menjalankan command Linux tanpa perlu komputer atau akses root.
+</p>
+
+<br>
+
+<p>
+Termux bekerja seperti mini Linux di HP. Di dalamnya kamu bisa install package, menjalankan server, membuat program, dan belajar sistem operasi Linux secara langsung dari Android.
+</p>
+
+<br>
+
+<p>
+Aplikasi ini sangat populer di kalangan programmer, pelajar IT, dan orang yang ingin belajar hacking, networking, dan development tanpa laptop mahal.
+</p>
+</div>
+
+<!-- FITUR -->
+<div class="card">
+<h2>Fitur Utama Termux</h2>
+
+<div class="grid">
+<div class="item"><b>Linux Terminal</b><br>Menjalankan command Linux langsung di Android</div>
+<div class="item"><b>Package Manager</b><br>Install tools dengan pkg/apt</div>
+<div class="item"><b>Programming</b><br>Support Python, PHP, Node.js, C, C++</div>
+<div class="item"><b>SSH Access</b><br>Remote server dengan aman</div>
+<div class="item"><b>Web Server</b><br>Bisa jalanin localhost</div>
+<div class="item"><b>Linux Distro</b><br>Ubuntu, Debian, Arch via proot</div>
+</div>
+</div>
+
+<!-- TOOLS -->
+<div class="card">
+<h2>Tools Populer (Klik untuk lihat command)</h2>
+
+<div class="tools-grid">
+<button onclick="show('python')">Python</button>
+<button onclick="show('git')">Git</button>
+<button onclick="show('node')">Node.js</button>
+<button onclick="show('php')">PHP</button>
+<button onclick="show('nano')">Nano</button>
+<button onclick="show('ssh')">SSH</button>
+</div>
+
+<pre id="codeBox">Pilih tools untuk melihat contoh command...</pre>
+</div>
+
+<!-- DISTRO -->
+<div class="card">
+<h2>Linux Distro di Termux</h2>
+
+<div class="grid">
+<div class="item"><b>Ubuntu</b><br>User friendly & populer</div>
+<div class="item"><b>Debian</b><br>Stabil untuk server</div>
+<div class="item"><b>Arch Linux</b><br>Flexibel & advanced</div>
+<div class="item"><b>Fedora</b><br>Teknologi terbaru</div>
+<div class="item"><b>Alpine</b><br>Ringan & minimal</div>
+<div class="item"><b>Kali Linux</b><br>Cybersecurity learning</div>
+</div>
+</div>
+
+<!-- KESIMPULAN -->
+<div class="card">
+<h2>Kesimpulan</h2>
+
+<p>
+Termux adalah jembatan antara Android dan Linux. Dengan aplikasi ini, HP kamu bisa berubah jadi mini server, alat belajar coding, sampai environment development lengkap.
+</p>
+
+<br>
+
+<p>
+Semakin kamu paham Termux, semakin kamu bisa eksplor dunia sistem operasi, networking, dan pemrograman tanpa batas perangkat mahal.
+</p>
+</div>
+
+</div>
+
+<footer>
+<b>TERMUX DOCUMENTATION WEB</b><br><br>
+Powered By Termux Community<br>
+Designed & Developed By Nathan NTA<br><br>
+© 2026 Nathan NTA. All Rights Reserved.
+</footer>
+
+<script>
+function show(tool){
+
+const data={
+python:`Python Example:
+python
+print("Hello World")
+
+Run file:
+python app.py`,
+
+git:`Git Example:
+git clone <repo>
+git status
+git add .
+git commit -m "update"`,
+
+node:`Node.js Example:
+node app.js
+npm init -y
+npm install express`,
+
+php:`PHP Server:
+php -S localhost:8080`,
+
+nano:`Nano Editor:
+nano file.txt
+CTRL+O save
+CTRL+X exit`,
+
+ssh:`SSH Login:
+ssh user@ip
+ssh-keygen`
+};
+
+document.getElementById("codeBox").innerText=data[tool];
+}
+</script>
+
+</body>
+</html>
